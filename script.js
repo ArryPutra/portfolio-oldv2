@@ -9,3 +9,6 @@ buttonDarkMode.onclick = function() {
 // MENU MOBILE
 let menuMobile = document.querySelector(".menu-mobile");
 
+menuMobile.onclick = function() {
+    menuMobile.classList.toggle("menuMobileScript");
+}
