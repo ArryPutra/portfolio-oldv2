@@ -143,33 +143,42 @@ nav {
     align-items: center;
     flex-direction: column;
 }
-.profil-image {
-    width: 240px;
+.profil {
+    width: 220px;
     height: 240px;
-    background-image: url(/profil.svg);
-    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-.home-container img {
-    width: 200px;
-
+.profil-circlebg {
+    width: 180px;
+    height: 180px;
+    background: #2094FF;
+    border-radius: 999px;
+}
+.profil img {
+    width: 220px;
+    position: absolute;
 }
 .profil-desc {
     color: white;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     font-size: 34px;
     text-align: center;
+    padding: 20px 0px;
 }
 
 .profil-social-media {
     display: flex;
-    align-items: flex-end;
     justify-content: space-around;
-    height: 60px;
+    padding: 10px 0px;
 }
 .profil-social-media svg {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     transition: 0.3s;
     color: white;
