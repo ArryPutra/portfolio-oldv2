@@ -10,19 +10,28 @@ header {
     font-family: 'Inter', sans-serif;
 }
 /* LIGHTMODE-SCRIPT */
-.darkMode .home {
+.darkMode .home,
+.darkMode nav {
     background: white;
 }
-.darkMode {
-    background: white;
+.darkMode .about,
+.darkMode .about-container,
+.darkMode .about svg {
+    background: aliceblue;
 }
-.darkMode .menu {
+.darkMode .wave svg,
+.darkMode .about svg {
+    color: aliceblue;
+}
+/* DARKMODE-SCRIPT */
+.darkMode .menu,
+.darkMode .about-container {
     color: #03011E;
 }
 .darkMode .dark-mode {
     border: 3px solid #03011E;
 }
-.darkMode .logo,
+.darkMode .logo::before,
 .darkMode .name,
 .darkMode .title,
 .darkMode .profil-social-media svg {
@@ -44,6 +53,9 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 3;
+    background: #110F26;
+    box-shadow: 0px 0px 10px #03011e10;
+    backdrop-filter: blur(-10px);
 }
 .dark-mode {
     width: 44px;
@@ -53,7 +65,6 @@ nav {
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: 0.3s ease-in-out;
 }
 .dark-mode:hover {
     border: 3px solid #2094FF;
@@ -103,8 +114,8 @@ nav {
     width: 100%;
     height: 18%;
     background-color: white;
-    transition: 0.3s ease-in-out;
     border-radius: 99px;
+    transition: 0.3s ease-in-out;
 }
 .menuMobileScript.menu-mobile::before {
     transform: rotate(-45deg) translate(-25%, 6px);
@@ -120,12 +131,15 @@ nav {
 }
 
 /* LOGO */
-.logo {
-    font-size: 30px;
+.logo::before {
+    content: "Arry";
     color: white;
+    font-size: 30px;
 }
-.logo span {
+.logo::after {
+    content: "Putra";
     color: #2094FF;
+    font-size: 30px;
 }
 
 /* HOME */
@@ -136,7 +150,6 @@ nav {
     align-items: center;
     justify-content: center;
     background: #03011E;
-    transition: 0.5s ease-in-out;
 }
 .home-container {
     width: 100%;
@@ -156,13 +169,8 @@ nav {
     height: 180px;
     background: linear-gradient(45deg, #2094FF, rgb(0, 247, 255));
     position: relative;
-    animation: circlebg 3s alternate infinite ease-in-out;
-    transition: 0.7s;
+    animation: circlebg 5s alternate infinite ease-in-out;
     z-index: 0;
-}
-.profil-circlebg:hover {
-    width: 200px;
-    height: 200px;
 }
 @keyframes circlebg {
     0% {
@@ -242,7 +250,6 @@ nav {
 }
 .profil-social-media svg {
     cursor: pointer;
-    transition: 0.3s;
     color: white;
     width: 32px;
 }
@@ -252,7 +259,7 @@ nav {
 
 /* WAVE */
 .wave {
-    bottom: 0;
+    bottom: -1px;
     display: flex;
     position: absolute;
     width: 100%;
@@ -263,8 +270,26 @@ nav {
 /* ABOUT */
 .about {
     width: 100%;
-    height: 100vh;
     background: #110F26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-container {
+    gap: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+.about svg {
+    background: #03011E;
+    color: #110F26;
+    rotate: 180deg;
+    padding: 0;
 }
 
 /* MEDIA SCREEN */
