@@ -10,7 +10,7 @@ header {
     width: 100%;
     font-family: 'Inter', sans-serif;
 }
-/* LIGHTMODE-SCRIPT */
+/* LIGH-SCRIPT */
 .darkMode .home,
 .darkMode nav,
 .darkMode .about,
@@ -25,7 +25,7 @@ header {
 .darkMode .about svg {
     color: aliceblue;
 }
-/* DARKMODE-SCRIPT */
+/* DARK-SCRIPT */
 .darkMode .logo::before,
 .darkMode .name,
 .darkMode .title,
@@ -34,7 +34,9 @@ header {
 .darkMode .about-container,
 .darkMode .about-wave,
 .darkMode .skills-txt,
-.darkMode .web-development-txt {
+.darkMode .web-development-txt,
+.darkMode .experience-container-icon svg,
+.darkMode .experience-container-tittle {
     color: #03011E;
 }
 .darkMode .dark-mode {
@@ -45,7 +47,8 @@ header {
 .darkMode .menu-mobile::after,
 .darkMode .menu-mobile::before,
 .darkMode .skills-txt::after,
-.darkMode .skills-txt::before {
+.darkMode .skills-txt::before,
+.darkMode .experience-icon-line {
     background: #03011E;
 }
 
@@ -158,7 +161,7 @@ nav {
     background: #03011E;
 }
 .home-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -371,7 +374,42 @@ nav {
 
 /* EXPERIENCE */
 .experience {
-    background-color: red;
+    padding: 50px 0px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 40px;
+}
+.experience-container {
+    width: 100%;
+    display: flex;
+}
+.experience-container-icon svg {
+    padding-right: 20px;
+    position: relative;
+    color: white;
+}
+.experience-container-tittle {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    gap: 5px;
+}
+.experience-container-icon {
+    position: relative;
+}
+.experience-icon-line {
+    position: absolute;
+    background: white;
+    width: 3px;
+    height: 40%;
+    opacity: 0.5;
+    display: block;
+    right: 65%;
+    bottom: 0;
 }
 
 /* MEDIA SCREEN */
@@ -409,6 +447,18 @@ nav {
     .web-development-container {
         width: 35%;
     }
+    /* EXPERIENCE */
+    .experience {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .experience-container {
+        width: 40%;
+    }
+    .experience-container-tittle {
+        align-items: center;
+        text-align: center;
+    }
 
 }
 
@@ -420,5 +470,8 @@ nav {
     /* HOME */
     .home-container {
         margin-top: 80px;
+    }
+    .profil {
+        width: 80%;
     }
 }
