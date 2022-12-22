@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 /* MAIN */
 body {
@@ -11,12 +12,11 @@ header {
 }
 /* LIGHTMODE-SCRIPT */
 .darkMode .home,
-.darkMode nav {
+.darkMode nav,
+.darkMode .about svg {
     background: white;
 }
-.darkMode .about,
-.darkMode .about-container,
-.darkMode .about svg {
+.darkMode .about {
     background: aliceblue;
 }
 .darkMode .wave svg,
@@ -65,6 +65,7 @@ nav {
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: border 0.3s ease-in-out;
 }
 .dark-mode:hover {
     border: 3px solid #2094FF;
@@ -252,6 +253,7 @@ nav {
     cursor: pointer;
     color: white;
     width: 32px;
+    transition: margin-bottom 0.1s ease-in-out;
 }
 .profil-social-media svg:hover {
     margin-bottom: 5px;
@@ -270,13 +272,13 @@ nav {
 /* ABOUT */
 .about {
     width: 100%;
-    background: #110F26;
+    background: #03011E;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.about-container {
+.about-wave {
     gap: 20px;
     color: white;
     display: flex;
@@ -284,14 +286,75 @@ nav {
     align-items: center;
     text-align: center;
     width: 80%;
+    background: #110F26;
+    padding-left: 10%;
+    padding-right: 10%;
 }
-.about svg {
-    background: #03011E;
-    color: #110F26;
-    rotate: 180deg;
-    padding: 0;
+/* SKILLS */
+.skills-txt {
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10%;
+}
+.skills-txt::before {
+    content: "";
+    background: white;
+    width: 30%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    opacity: 0.1;
+    bottom: 45%;
+}
+.skills-txt::after {
+    content: "";
+    background: white;
+    width: 30%;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    opacity: 0.1;
+    bottom: 45%;
 }
 
+.about-skills {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.web-development {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.web-development-txt {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: aliceblue;
+    background: #110F26;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+.web-development-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
 /* MEDIA SCREEN */
 /* LAPTOP */
 @media screen and (min-width: 640px) {
@@ -313,6 +376,18 @@ nav {
     .profil-social-media {
         justify-content: space-between;
     }
+    /* SKILLS */
+    .skills-txt::before,
+    .skills-txt::after {
+        width: 40%;
+    }
+    .about-skills {
+        flex-direction: row;
+    }
+    .web-development {
+        width: 35%;
+    }
+
 }
 
 /* MOBILE */
