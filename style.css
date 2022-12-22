@@ -13,10 +13,12 @@ header {
 /* LIGHTMODE-SCRIPT */
 .darkMode .home,
 .darkMode nav,
+.darkMode .about,
 .darkMode .about svg {
     background: white;
 }
-.darkMode .about {
+.darkMode .about-wave,
+.darkMode .web-development-txt {
     background: aliceblue;
 }
 .darkMode .wave svg,
@@ -24,23 +26,26 @@ header {
     color: aliceblue;
 }
 /* DARKMODE-SCRIPT */
+.darkMode .logo::before,
+.darkMode .name,
+.darkMode .title,
+.darkMode .profil-social-media svg,
 .darkMode .menu,
-.darkMode .about-container {
+.darkMode .about-container,
+.darkMode .about-wave,
+.darkMode .skills-txt,
+.darkMode .web-development-txt {
     color: #03011E;
 }
 .darkMode .dark-mode {
     border: 3px solid #03011E;
 }
-.darkMode .logo::before,
-.darkMode .name,
-.darkMode .title,
-.darkMode .profil-social-media svg {
-    color: #03011E;
-}
 
 .darkMode .menu-mobile span,
 .darkMode .menu-mobile::after,
-.darkMode .menu-mobile::before {
+.darkMode .menu-mobile::before,
+.darkMode .skills-txt::after,
+.darkMode .skills-txt::before {
     background: #03011E;
 }
 
@@ -274,9 +279,8 @@ nav {
     width: 100%;
     background: #03011E;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 .about-wave {
     gap: 20px;
@@ -285,11 +289,14 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
     background: #110F26;
-    padding-left: 10%;
-    padding-right: 10%;
 }
+.about-wave svg {
+    rotate: 180deg;
+    color: #110F26;
+    background: #03011E;
+} 
 /* SKILLS */
 .skills-txt {
     font-size: 30px;
@@ -330,11 +337,17 @@ nav {
 }
 .web-development {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+}
+.web-development-container {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 80%;
-    flex-wrap: wrap;
 }
 .web-development-txt {
     text-align: center;
@@ -355,6 +368,12 @@ nav {
     width: 100%;
     height: 120px;
 }
+
+/* EXPERIENCE */
+.experience {
+    background-color: red;
+}
+
 /* MEDIA SCREEN */
 /* LAPTOP */
 @media screen and (min-width: 640px) {
@@ -385,6 +404,9 @@ nav {
         flex-direction: row;
     }
     .web-development {
+        flex-direction: row;
+    }
+    .web-development-container {
         width: 35%;
     }
 
