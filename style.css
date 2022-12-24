@@ -41,7 +41,8 @@ header {
 .darkMode .experience-container-tittle,
 .darkMode .project-txt,
 .darkMode .project-box-tittle,
-.darkMode .project-box-desc {
+.darkMode .project-box-desc,
+.darkMode .project-box-desc span {
     color: #03011E;
 }
 .darkMode .dark-mode {
@@ -538,7 +539,7 @@ nav {
     background: #110F26;
     width: 100%;
     padding: 30px 0px;
-    gap: 30px;
+    gap: 50px;
 }
 .project-txt {
     font-size: 25px;
@@ -556,76 +557,137 @@ nav {
 .project-container {
     width: 80%;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-.project-box-container {
-    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .project-box {
-    width: 320px;
-    height: 280px;
-    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    height: 270px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 .project-box-img {
     width: 95%;
-    height: 65%;
-    border-radius: 12px;
+    height: 68%;
     overflow: hidden;
-}   
+    border-radius: 12px;
+}
 .project-box-img img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    transition: 0.3s ease-in-out;
+    object-fit: cover;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 .project-box-img img:hover {
-    transform: scale(110%);
+    scale: 1.1;
 }
 .project-box-tittle {
     width: 95%;
     font-size: 22px;
-    padding: 10px 0px;
     color: white;
 }
 .project-box-desc {
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;
-    color: white;
 }
 .project-box-desc span {
-    font-size: 20px;
-    opacity: 0.3;
+    color: white;
+    font-size: 18px;
+    opacity: 0.5;
 }
 .project-box-desc button {
     background: #2094FF;
-    color: white;
-    border: none;
-    width: 120px;
-    height: 32px;
     border-radius: 99px;
-    font-size: 18px;
+    border: none;
+    color: white;
     font-weight: 700;
+    font-size: 18px;
+    width: 40%;
+    height: 32px;
+    overflow: hidden;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.3s ease-in-out;
 }
 .project-box-desc button:hover {
-    opacity: 0.8;
     letter-spacing: 3px;
 }
 
 /* CONTACT */
-
+.contact {
+    background: #03011E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    gap: 40px;
+}
+.contact-txt {
+    width: fit-content;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    position: relative;
+}
+.contact-txt::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #2094FF;
+    bottom: -8px;
+}
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    gap: 20px;
+}
+.contact-form input {
+    width: 95%;
+    height: 40px;
+    padding: 0px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #110F26;
+    color: aliceblue;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+.contact-form textarea {
+    width: 94%;
+    padding: 15px 15px;
+    height: 180px;
+    border-radius: 12px;
+    background: #110F26;
+    border: none;
+    color: white;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+.contact-form button {
+    background: #2094FF;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 99px;
+    color: rgba(255, 255, 255, 0.543);
+    font-family: 'Inter';
+    font-size: 16px;
+}
 
 /* MEDIA SCREEN */
 /* LAPTOP */
