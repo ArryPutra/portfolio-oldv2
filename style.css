@@ -10,24 +10,28 @@ header {
 }
 
 /* MAIN */
-/* LIGH-SCRIPT */
+/* MODE-LIGH-SCRIPT */
 .darkMode .home,
 .darkMode nav,
 .darkMode .about,
 .darkMode .about svg,
-.darkMode .menu-icon-remove {
+.darkMode .menu-icon-remove,
+.darkMode .contact {
     background: white;
 }
 .darkMode .about-wave,
 .darkMode .web-development-txt,
-.darkMode .project {
+.darkMode .project,
+.darkMode .contact-form input,
+.darkMode .contact-form textarea {
     background: aliceblue;
 }
 .darkMode .wave svg,
-.darkMode .about svg {
+.darkMode .about svg,
+a {
     color: aliceblue;
 }
-/* DARK-SCRIPT */
+/* MODE-DARK-SCRIPT */
 .darkMode .logo::before,
 .darkMode .name,
 .darkMode .title,
@@ -42,7 +46,11 @@ header {
 .darkMode .project-txt,
 .darkMode .project-box-tittle,
 .darkMode .project-box-desc,
-.darkMode .project-box-desc span {
+.darkMode .project-box-desc span,
+.darkMode .contact-txt,
+.darkMode .contact-social-media-container svg,
+.darkMode .contact-social-media span,
+.darkMode .txt-line span:nth-child(2) {
     color: #03011E;
 }
 .darkMode .dark-mode {
@@ -55,7 +63,10 @@ header {
 .darkMode .skills-txt::after,
 .darkMode .skills-txt::before,
 .darkMode .experience-icon-line,
-.darkMode .menu-mobile-social-media div {
+.darkMode .menu-mobile-social-media div,
+.darkMode .line-contact,
+.darkMode .txt-line span:nth-child(1),
+.darkMode .txt-line span:nth-child(3) {
     background: #03011E;
 }
 
@@ -209,11 +220,11 @@ nav {
     font-weight: 700;
     width: fit-content;
 }
-.menu-mobile-txt:hover {
-    color: #2094FF;
-}
 .darkMode .menu-mobile-txt {
     color: #03011ea1;
+}
+.menu-mobile-txt:hover {
+    color: #2094FF;
 }
 .menu-mobile-social-media {
     width: 90%;
@@ -490,10 +501,10 @@ nav {
 .web-development-logo svg {
     cursor: pointer;
     scale: 1;
-    transition: scale 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }   
 .web-development-logo svg:hover {
-    scale: 0.9;
+    transform: scale(90%);
 }
 
 /* EXPERIENCE */
@@ -514,10 +525,10 @@ nav {
     position: relative;
     color: white;
     cursor: pointer;
-    transition: scale 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 .experience-container-icon svg:hover {
-    scale: 0.9;
+    transform: scale(90%);
 }
 .experience-container-tittle {
     overflow: hidden;
@@ -564,7 +575,7 @@ nav {
 .project-box {
     width: 100%;
     max-width: 300px;
-    height: 270px;
+    height: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -585,7 +596,7 @@ nav {
     transition: 0.3s ease-in-out;
 }
 .project-box-img img:hover {
-    scale: 1.1;
+    transform: scale(110%);
 }
 .project-box-tittle {
     width: 95%;
@@ -609,7 +620,7 @@ nav {
     border: none;
     color: white;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     width: 40%;
     height: 32px;
     overflow: hidden;
@@ -663,30 +674,67 @@ nav {
     border: none;
     border-radius: 10px;
     background: #110F26;
-    color: aliceblue;
-    font-family: 'Inter';
-    font-size: 14px;
-}
-.contact-form textarea {
-    width: 94%;
-    padding: 15px 15px;
-    height: 180px;
-    border-radius: 12px;
-    background: #110F26;
-    border: none;
     color: white;
     font-family: 'Inter';
     font-size: 14px;
+    caret-color: #2094FF;
+    outline: 0;
+}
+.contact-form textarea {
+    resize: none;
+    width: 95%;
+    padding: 15px 15px;
+    background: #110F26;
+    border: none;
+    border-radius: 10px;
+    height: 140px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    caret-color: #2094FF;
+    outline: 0;
 }
 .contact-form button {
-    background: #2094FF;
-    width: 100%;
-    height: 35px;
+    background: linear-gradient(to right, #2094FF, #42ecf8);
+    width: 105%;
+    height: 38px;
     border: none;
     border-radius: 99px;
-    color: rgba(255, 255, 255, 0.543);
+    color: white;
     font-family: 'Inter';
     font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-social-media {
+    width: 80%;
+    max-width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-social-media-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    opacity: 0.7;
+}
+.line-contact {
+    background: aliceblue;
+    width: 80%;
+    max-width: 300px;
+    height: 3px;
+    opacity: 0.1;
+}
+.contact-social-media span {
+    text-align: center;
+    color: aliceblue;
+    opacity: 0.5;
+    font-size: 15px;
 }
 
 /* MEDIA SCREEN */
