@@ -14,3 +14,9 @@ menuMobile.onclick = function () {
     menuMobile.classList.toggle("hamburgerMenuAnimation");
     document.querySelector(".menu-mobile").classList.toggle("menuMobileScript");
 }
+
+let submitButton = document.querySelector(".submit");
+
+submitButton.onclick = function() {
+    submitButton.textContent = "Thank You ! :)";
+}
