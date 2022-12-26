@@ -7,23 +7,25 @@
     <title>ArryPutra</title>
     <link rel="stylesheet" href="style.css">
     <!-- FONT GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap" rel="stylesheet">
     <!-- ANIMATION ON SCROLL -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <!-- MENU AUTO SCROLL -->
+    <section id="about-link">ABOUT</section>
+
 <header>
     <!-- NAVBAR -->
     <nav>
         <div class="dark-mode">
             <div></div>
         </div>
-            <button class="menu">Home</button>
-            <button class="menu">About</button>
-            <button class="menu">Project</button>
-            <button class="menu">Contact</button>
+        <!-- MENU-DEKSTOP -->
+            <a href="#home-link" class="menu"><button class="menu">Home</button></a>
+            <a href="#about-link" class="menu"><button class="menu">About</button></a>
+            <a href="#project-link" class="menu"><button class="menu">Project</button></a>
+            <a href="#contact-link" class="menu"><button class="menu">Contact</button></a>
         <span class="logo"></span>
         <div class="hamburger-menu">
             <span></span>
@@ -34,10 +36,10 @@
     <div class="menu-mobile">
         <div class="menu-mobile-container">
             <div class="menu-mobile-txt-container">
-                <button class="menu-mobile-txt">Home</button>
-                <button class="menu-mobile-txt">About</button>
-                <button class="menu-mobile-txt">Project</button>
-                <button class="menu-mobile-txt">Contact</button>
+                <a href="#home-link"><button class="menu-mobile-txt">Home</button></a>
+                <a href="#about-link" ><button class="menu-mobile-txt">About</button></a>
+                <a href="#project-link"><button class="menu-mobile-txt">Project</button></a>
+                <a href="#contact-link"><button class="menu-mobile-txt">Contact</button></a>
             </div>
             <span class="menu-mobile-social-media">
                 <div></div>
@@ -61,7 +63,7 @@
     </div>
 
     <!-- HOME -->
-    <div class="home" id="home">
+    <div class="home" id="home-link">
         <div class="home-container">
             <div class="profil">
                 <img src="profil.png">
@@ -120,7 +122,6 @@
             <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 103.92857142857142,217 207.85714285714283,234 336,232 C 464.14285714285717,230 616.5000000000001,209.00000000000003 742,190 C 867.4999999999999,170.99999999999997 966.1428571428571,154 1078,156 C 1189.857142857143,158 1314.9285714285716,179 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="currentcolor" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
         </div>
     </div>
-
     <!-- ABOUT -->
     <div class="about">
         <div class="about-wave">
@@ -136,7 +137,7 @@
         </span>
         <div class="about-skills">    
             <div class="web-development">
-                <div class="web-development-container">
+                <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="web-development-container">
                     <div class="web-development-txt">Web Development</div>
                     <div class="web-development-logo">
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="80px" height="80px"><path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"/><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"/><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"/><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"/></svg>
@@ -144,7 +145,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="80px" height="80px"><path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"/><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"/><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"/><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"/></svg>
                     </div>
                 </div>
-                <div class="web-development-container">
+                <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="web-development-container">
                     <div class="web-development-txt">UI Design</div>
                     <div class="web-development-logo">
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="70px" height="70px"><path fill="#e64a19" d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z"/><path fill="#7c4dff" d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z"/><path fill="#66bb6a" d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z"/><path fill="#ff7043" d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z"/><circle cx="32" cy="24" r="7" fill="#29b6f6"/></svg>
@@ -160,7 +161,7 @@
         </span>
 
         <div class="experience">
-            <div class="experience-container">
+            <div div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="experience-container">
                 <div class="experience-container-icon">
                     <svg width="50" height="40" viewBox="0 0 40 32" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.5111 32L6.62222 24.9333V14.2667L0 10.6667L19.5111 0L39.1111 10.6667V24.7556H36.4444V12.2222L32.4 14.2667V24.9333L19.5111 32ZM19.5111 18.3111L33.5111 10.6667L19.5111 3.15556L5.6 10.6667L19.5111 18.3111ZM19.5111 28.9778L29.7333 23.3333V15.8667L19.5111 21.3333L9.28889 15.7778V23.3333L19.5111 28.9778Z" fill="currentcolor"/>
@@ -168,12 +169,12 @@
                 </div>
                 <div class="experience-container-tittle">
                     <span style="font-size: 20px;">EDUCATION</span>
-                    <span style="font-size: 16px; opacity: 0.5;">Politeknik Negeri Banjarmasin</span>
-                    <span style="font-size: 16px; opacity: 0.5;">(2022 - NOW)</span>
+                    <span style="font-size: 16px; opacity: 0.5; font-weight: 700;">Politeknik Negeri Banjarmasin</span>
+                    <span style="font-size: 16px; opacity: 0.5; font-weight: 700;">(2022 - NOW)</span>
                 </div>
             </div>
 
-            <div class="experience-container">
+            <div div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="experience-container">
                 <div class="experience-container-icon">
                     <svg width="50" height="40" viewBox="0 0 43 40" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.15789 40C2.31579 40 1.57895 39.6842 0.947369 39.0526C0.31579 38.4211 0 37.6842 0 36.8421V11.5789C0 10.7368 0.31579 10 0.947369 9.36842C1.57895 8.73684 2.31579 8.42105 3.15789 8.42105H12.6316V3.15789C12.6316 2.31579 12.9474 1.57895 13.5789 0.947369C14.2105 0.31579 14.9474 0 15.7895 0H26.3158C27.1579 0 27.8947 0.31579 28.5263 0.947369C29.1579 1.57895 29.4737 2.31579 29.4737 3.15789V8.42105H38.9474C39.7895 8.42105 40.5263 8.73684 41.1579 9.36842C41.7895 10 42.1053 10.7368 42.1053 11.5789V36.8421C42.1053 37.6842 41.7895 38.4211 41.1579 39.0526C40.5263 39.6842 39.7895 40 38.9474 40H3.15789ZM3.15789 36.8421H38.9474V11.5789H3.15789V36.8421ZM15.7895 8.42105H26.3158V3.15789H15.7895V8.42105ZM3.15789 36.8421V11.5789V36.8421Z" fill="currentcolor"/>
@@ -181,20 +182,20 @@
                 </div>
                 <div class="experience-container-tittle">
                     <span style="font-size: 20px;">Work</span>
-                    <span style="font-size: 16px; opacity: 0.5;">Freelance</span>
-                    <span style="font-size: 16px; opacity: 0.5;">(2023 - NOW)</span>
+                    <span style="font-size: 16px; opacity: 0.5; font-weight: 700;">Freelance</span>
+                    <span style="font-size: 16px; opacity: 0.5; font-weight: 700;">(2023 - NOW)</span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- PROJECT -->
-
+    <section id="project-link">PROJECT</section>
     <div class="project">
     <span class="project-txt">PROJECT</span>
         <div class="project-container">
 
-            <div class="project-box">
+            <div data-aos="zoom-in" data-aos-duration="700" data-aos-once="true" class="project-box">
                 <div class="project-box-img">
                     <img src="https://th.bing.com/th/id/OIP.hJvAmDMLzpKfrKRgzNajBwHaFj?pid=ImgDet&rs=1">
                 </div>    
@@ -202,12 +203,12 @@
                     <span>UI Design Mobile</span>
                 </div>
                 <div class="project-box-desc">
-                    <span>JavaScript</span>
-                    <button>Explore</button>
+                    <span style="font-weight: 700;">JavaScript</span>
+                    <button style="font-weight: 700;">Explore</button>
                 </div>
             </div>
 
-            <div class="project-box">
+            <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200" data-aos-once="true" class="project-box">
                 <div class="project-box-img">
                     <img src="https://th.bing.com/th/id/OIP.hJvAmDMLzpKfrKRgzNajBwHaFj?pid=ImgDet&rs=1">
                 </div>    
@@ -215,12 +216,12 @@
                     <span>UI Design Mobile</span>
                 </div>
                 <div class="project-box-desc">
-                    <span>JavaScript</span>
-                    <button>Explore</button>
+                    <span style="font-weight: 700;">JavaScript</span>
+                    <button style="font-weight: 700;">Explore</button>
                 </div>
             </div>
-
-            <div class="project-box">
+    
+            <div  data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400" data-aos-once="true" class="project-box">
                 <div class="project-box-img">
                     <img src="https://th.bing.com/th/id/OIP.hJvAmDMLzpKfrKRgzNajBwHaFj?pid=ImgDet&rs=1">
                 </div>    
@@ -228,15 +229,16 @@
                     <span>UI Design Mobile</span>
                 </div>
                 <div class="project-box-desc">
-                    <span>JavaScript</span>
-                    <button>Explore</button>
+                    <span style="font-weight: 700;">JavaScript</span>
+                    <button style="font-weight: 700;">Explore</button>
                 </div>
             </div>
-
         </div>
     </div>
+    
 
     <!-- CONTACT -->
+    <section id="contact-link">contact</section>
     <div class="contact">
         <span class="contact-txt">CONTACT</span>
         <form action="https://formsubmit.co/bcaada81c10df6e89b6a81e2af00286f" method="POST" target="_blank" class="contact-form">
