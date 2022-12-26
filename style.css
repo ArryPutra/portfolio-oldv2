@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 header {
     width: 100%;
     font-family: 'Inter', sans-serif;
+    font-weight: 800;
 }
-
+/* MENU SCROLL */
+section {
+    position: absolute;
+    color: crimson;
+    z-index: 10;
+    opacity: 0;
+}
+#about-link {
+    background: cadetblue;
+    transform: translateY(55vh);
+}
+#project-link {
+    background: chartreuse;
+    transform: translateY(-80px);
+}
+#contact-link {
+    background: cornsilk;
+    transform: translateY(-80px);
+}
 /* MAIN */
 /* MODE-LIGH-SCRIPT */
 .darkMode .home,
@@ -125,6 +147,7 @@ nav {
     cursor: pointer;
     transition: color 0.3s ease-in-out;
     position: relative;
+    background: none;
 }
 .menu:hover {
     color: #2094FF;
@@ -191,6 +214,9 @@ nav {
 }
 
 /* MENU MOBILE */
+.menu-mobile a {
+    text-decoration: none;
+}
 .menu-mobile {
     position: fixed;
     background: #110f268e;
@@ -226,6 +252,9 @@ nav {
     height: 70%;
     justify-content: space-between;
 }   
+.menu-mobile-txt-container a {
+    width: fit-content;
+}
 .menu-mobile-txt:last-child {
     margin-bottom: 20px;
 }
@@ -238,7 +267,6 @@ nav {
     border: none;
     display: flex;
     font-weight: 700;
-    width: fit-content;
 }
 .darkMode .menu-mobile-txt {
     color: #03011ea1;
@@ -518,7 +546,6 @@ nav {
 }
 .web-development-logo svg {
     cursor: pointer;
-    scale: 1;
     transition: transform 0.3s ease-in-out;
 }   
 .web-development-logo svg:hover {
@@ -584,7 +611,7 @@ nav {
     bottom: -8px;
 }
 .project-container {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -647,6 +674,7 @@ nav {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in-out;
+    font-family: 'Inter', sans-serif;
 }
 .project-box-desc button:hover {
     letter-spacing: 3px;
