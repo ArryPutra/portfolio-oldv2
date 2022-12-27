@@ -4,7 +4,16 @@ let buttonDarkMode = document.querySelector(".dark-mode");
 
 buttonDarkMode.onclick = function () {
     darkMode.classList.toggle("darkMode");
+    if(darkMode.classList.contains("darkMode")) {
+        localStorage.setItem("tema", "terang");
+    } else {
+        localStorage.setItem("tema", "gelap");
+    }
 }
+if(localStorage.getItem("tema") == "terang") {
+    darkMode.classList.add("darkMode");
+}
+
 
 
 // MENU MOBILE
@@ -20,3 +29,5 @@ let submitButton = document.querySelector(".submit");
 submitButton.onclick = function() {
     submitButton.textContent = "Thank You ! :)";
 }
+
+// 
