@@ -659,7 +659,8 @@ nav {
     font-size: 18px;
     opacity: 0.5;
 }
-.project-box-desc button {
+.project-box-desc a {
+    text-decoration: none;
     background: #2094FF;
     border-radius: 99px;
     border: none;
@@ -676,7 +677,7 @@ nav {
     transition: 0.3s ease-in-out;
     font-family: 'Inter', sans-serif;
 }
-.project-box-desc button:hover {
+.project-box-desc a:hover {
     letter-spacing: 3px;
 }
 
