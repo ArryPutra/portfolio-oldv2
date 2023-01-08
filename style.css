@@ -517,6 +517,7 @@ nav {
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    flex-wrap: wrap;
 }
 .web-development-container {
     display: flex;
