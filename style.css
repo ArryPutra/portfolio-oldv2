@@ -640,9 +640,6 @@ nav {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.project-box-img img:hover {
-    transform: scale(110%);
-}
 .project-box-tittle {
     width: 95%;
     font-size: 22px;
