@@ -28,6 +28,7 @@ let submitButton = document.querySelector(".submit");
 
 submitButton.onclick = function() {
     submitButton.textContent = "Thank You ! :)";
+    console.log('hi')
 }
 
 // 
